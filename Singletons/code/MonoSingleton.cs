@@ -1,9 +1,9 @@
 // source: https://github.com/NewBloodInteractive/com.newblood.core/blob/master/Runtime/MonoSingleton.cs
-// alterations: the namespace has been changed to signal the focus on the signleton feature.
+// alterations: the namespace has been changed to be part of the UnityResources package.
 
 using UnityEngine;
 
-namespace Singleton 
+namespace UnityResources.Singleton 
 {
     /// <summary> Base type for the <see cref="MonoSingleton{TSelf}"/> class.</summary>
     [DisallowMultipleComponent]
