@@ -45,7 +45,7 @@ The Instance property will attempt to create the component if it does not exist,
 
 2. Depending on which approach you have taken to implementing the pattern, you may have taken "ownership" of the Awake method. \
 \
-While you can make this method virtual, it's easy to forget to override it—because this is not necessary when writing a normal component.
+While you can make this method virtual, it's easy to forget to override it—because this is not necessary when writing a normal component. \
 ![awake ownership issue example](/Singletons/ReadMeResources/AwakeOwnershipIssue.png)
 
 3. If we remove the functionality to create the component when it is not found, we will find ourselves with a large performance hit when forgetting to place one in a scene, the Instance property will always call `FindObjectOfType` (a rather slow method) and fail.
