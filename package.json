@@ -1,7 +1,7 @@
 {
     "name": "com.unityresources",
-    "displayName": "New Blood Core Library",
-    "description": "A collection of general APIs to assist development.",
+    "displayName": "Unity Resources",
+    "description": "A personal collection of handy tools for Unity development.",
     "version": "1.0.0",
     "type": "library"
 }
