@@ -1,7 +1,8 @@
 # Source
 Author: Benjamin Moir \
 Repository: https://github.com/NewBloodInteractive/com.newblood.core \
-Thread: https://twitter.com/TheZombieKiller/status/1488926918712107009 
+Thread: https://twitter.com/TheZombieKiller/status/1488926918712107009 \
+License: https://github.com/NewBloodInteractive/com.newblood.core/blob/master/LICENSE.md
 
 # Details
 A singleton implementation that aims to solve common headaches found with other implementations.
