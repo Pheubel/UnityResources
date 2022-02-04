@@ -132,7 +132,7 @@ public static class PersistentObjects
         root.SetActive(false);
         var instance = Object.Instantiate(prefab, root.transform);
 
-        foreach (var component in instance.GetComponentsInChildren<IPeristentObject>(includeInactive: true))
+        foreach (var component in instance.GetComponentsInChildren<IPersistentObject>(includeInactive: true))
             component.Initialize();
         
         Object.DontDestroyOnLoad(root);
@@ -165,7 +165,7 @@ This part is quite simple: we look for components implementing our `IPersistentO
 
 For our `MonoSingleton` class, this will assign the `Instance` property, making it available when `Awake` runs!
 ```cs
-foreach (var component in instance.GetComponentsInChildren<IPeristentObject>(includeInactive: true))
+foreach (var component in instance.GetComponentsInChildren<IPersistentObject>(includeInactive: true))
     component.Initialize();
 ```
 
@@ -282,7 +282,7 @@ public static class PersistentObjects
         root.SetActive(false);
         var instance = Object.Instantiate(prefab, root.transform);
 
-        foreach (var component in instance.GetComponentsInChildren<IPeristentObject>(includeInactive: true))
+        foreach (var component in instance.GetComponentsInChildren<IPersistentObject>(includeInactive: true))
             component.Initialize();
         
         Object.DontDestroyOnLoad(root);
