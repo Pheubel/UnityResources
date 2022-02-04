@@ -7,6 +7,10 @@ License: https://github.com/NewBloodInteractive/com.newblood.core/blob/master/LI
 # Details
 A singleton implementation that aims to solve common headaches found with other implementations.
 
+To set up your signletons You will have to create a folder named `Resources`, this will be where `Resources.Load` will look, and next create a prefab inside of this folder. To add singletons you will have to add them as child objects to the prefab.
+
+Lastly, you will have to set up a prefab loading mechanism similar to the one documented [here](#PersistentObjectsInitializer). Once the scene runs you will see that the children of the prefab with a component that implements the `IPersistentObject` interface have been released in the "DontDestroyOnLoad" scene, making them stick around until the gme stops running.
+
 # Citations
 Let's talk singletons. Love or hate them, they're an extremely common pattern in Unity games—for good reason. The engine itself even has some built-in! (kinda)
 
@@ -189,6 +193,7 @@ Unity exposes an attribute to enable you to run code when the game starts: `[Run
 We will use this to call `PersistentObjects.Initialize`.
 
 We retrieve our prefab object (you can do this however you wish), and then provide it to the `PersistentObjects.Initialize` method.
+<a name="PersistentObjectsInitializer"></a>
 ```cs
 internal static class PersistentObjectsInitializer
 {
